@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+  <meta name="theme-color" content="#17130f">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>EMBERBOUND — Erbe der ersten Flamme</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main id="shell" aria-label="EMBERBOUND Spiel">
+    <div id="screenFrame">
+      <canvas id="game" width="480" height="270" aria-label="Spielansicht"></canvas>
+
+      <section id="titleScreen" class="overlay title-screen">
+        <div class="title-panel pixel-panel">
+          <p class="kicker">Ein originales 32‑Bit‑Pixel‑JRPG</p>
+          <h1>EMBER<span>BOUND</span></h1>
+          <p class="subtitle">Erbe der ersten Flamme</p>
+          <div class="button-stack">
+            <button data-title="new">Neues Spiel</button>
+            <button id="continueButton" data-title="continue">Fortsetzen</button>
+            <button data-title="controls">Steuerung</button>
+          </div>
+          <small>Version 0.3.0 · Kapitel-I-Prolog</small>
+        </div>
+      </section>
+
+      <section id="hud" class="hud hidden">
+        <div class="pixel-panel location">
+          <small id="chapter">Kapitel I</small>
+          <strong id="location">Kohlgrund</strong>
+        </div>
+        <div class="pixel-panel objective">
+          <small>ZIEL</small>
+          <strong id="objective">Sprich mit Mara am Brunnen.</strong>
+        </div>
+        <button id="menuButton" class="square-button" aria-label="Menü öffnen">☰</button>
+      </section>
+
+      <section id="worldGuide" class="world-guide pixel-panel hidden">
+        <span><b>E</b> Betreten</span>
+        <span><b>M</b> Menü</span>
+      </section>
+
+      <section id="dialogue" class="dialogue pixel-panel hidden" aria-live="assertive">
+        <div id="dialoguePortrait" class="dialogue-portrait hidden" aria-hidden="true"></div>
+        <div class="dialogue-copy">
+          <strong id="speaker">Ryn</strong>
+          <p id="dialogueText"></p>
+          <button id="dialogueNext">Weiter ▾</button>
+        </div>
+      </section>
+
+      <section id="battleHud" class="battle-hud hidden">
+        <div id="enemyNames" class="enemy-names pixel-panel"></div>
+        <div id="battleMessage" class="battle-message pixel-panel"></div>
+        <div id="partyStatus" class="party-status pixel-panel"></div>
+        <div id="commandPanel" class="command-panel pixel-panel"></div>
+      </section>
+
+      <section id="menu" class="menu overlay hidden">
+        <div class="menu-window pixel-panel">
+          <header>
+            <div><small>REISEBUCH</small><h2>EMBERBOUND</h2></div>
+            <button id="closeMenu" class="square-button">×</button>
+          </header>
+          <div id="menuBody"></div>
+        </div>
+      </section>
+
+      <section id="modal" class="modal overlay hidden">
+        <div class="modal-window pixel-panel">
+          <button id="closeModal" class="square-button">×</button>
+          <div id="modalBody"></div>
+        </div>
+      </section>
+
+      <div id="toast" class="toast pixel-panel hidden"></div>
+
+      <section id="touchControls" class="touch-controls hidden">
+        <div class="dpad">
+          <button data-move="up">▲</button>
+          <button data-move="left">◀</button>
+          <button data-move="down">▼</button>
+          <button data-move="right">▶</button>
+        </div>
+        <button id="touchAction" class="action-button">A</button>
+      </section>
+    </div>
+  </main>
+
+  <script src="src/data.js"></script>
+  <script src="src/game.js"></script>
+</body>
+</html>

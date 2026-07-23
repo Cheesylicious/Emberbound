@@ -1,0 +1,10 @@
+{
+  "name": "emberbound-reborn",
+  "version": "0.3.0",
+  "private": true,
+  "description": "Ein originales 32-Bit-Pixel-JRPG mit begehbarer Weltkarte und Drachenformen.",
+  "scripts": {
+    "test": "node --check src/data.js && node --check src/game.js && node tests/smoke.cjs"
+  },
+  "license": "MIT"
+}

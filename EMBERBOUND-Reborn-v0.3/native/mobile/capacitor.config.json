@@ -1,0 +1,15 @@
+{
+  "appId": "games.emberbound.firstflame",
+  "appName": "EMBERBOUND",
+  "webDir": "../..",
+  "bundledWebRuntime": false,
+  "ios": {
+    "contentInset": "always",
+    "preferredContentMode": "mobile"
+  },
+  "android": {
+    "allowMixedContent": false,
+    "backgroundColor": "#17130f"
+  }
+}
+
