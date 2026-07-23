@@ -1,0 +1,14 @@
+{
+  "appId": "games.emberbound.echoesofaether",
+  "appName": "EMBERBOUND",
+  "webDir": "../../public/emberbound",
+  "bundledWebRuntime": false,
+  "ios": {
+    "contentInset": "always",
+    "preferredContentMode": "mobile"
+  },
+  "android": {
+    "allowMixedContent": false,
+    "backgroundColor": "#031014"
+  }
+}
